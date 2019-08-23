@@ -1,0 +1,42 @@
+use runrs::LifeAdjustments;
+
+fn main() {
+    let mut la = LifeAdjustments::new();
+    println!("Base marathon time is 3:45:00");
+    println!("Life Adjusted Time:");
+    la.miles_travelled_to_race = 1500.0;
+    println!("Miles Travelled Adjustment: {}s", la.miles_travelled_to_race_adjustment(13500.0));
+    la.has_coach = true;
+    println!("Coach Adjustment: {}s", la.has_coach_adjustment(13500.0));
+    la.percentage_of_workouts_posted = 50.0;
+    println!("Social Media Adjustment: {}s", la.percentage_of_workouts_posted_adjustment(13500.0));
+    la.weeks_of_training = 10.0;
+    println!("Weeks of Training Adjustment: {}s", la.weeks_of_training_adjustment(13500.0));
+    la.very_attractive = true;
+    println!("Attractive Adjustment: {}s", la.very_attractive_adjustment(13500.0));
+    la.destination_race = true;
+    println!("Destination Race Adjustment: {}s", la.destination_race_adjustment(13500.0));
+    la.number_of_medications = 5.0;
+    println!("Medication Adjustment: {}s", la.number_of_medications_adjustment(13500.0));
+    la.years_as_runner = 7.5;
+    println!("Years Running Adjustment: {}s", la.years_as_runner_adjustment(13500.0));
+    la.east_african = true;
+    println!("East African Adjustment: {}s", la.east_african_adjustment(13500.0));
+    la.had_pacer = true;
+    println!("Pacer Adjustment: {}s", la.had_pacer_adjustment(13500.0));
+    la.alcohol_units_prior = 6.5;
+    println!("Alcohol Adjustment: {}s", la.alcohol_units_prior_adjustment(13500.0));
+    la.following_plan = false;
+    println!("Following Plan Adjustment: {}s", la.following_plan_adjustment(13500.0));
+    la.pounds_overweight = 10.5;
+    println!("Overweight Adjustment: {}s", la.pounds_overweight_adjustment(13500.0));
+    la.age = 42.3;
+    println!("Age Adjustment: {}s", la.age_adjustment(13500.0));
+    la.hours_worked_per_week = 20.7;
+    println!("Hours Worked Adjustment: {}s", la.hours_worked_per_week_adjustment(13500.0));
+    la.is_married = true;
+    println!("Married Adjustment: {}s", la.is_married_adjustment(13500.0));
+    println!("Children Adjustment: {}s", la.minor_children_adjustment(13500.0));
+    println!("Life Adjusted Time: {}s", la.life_adjusted_time(13500));
+    println!("Life Adjusted Time From String: {}s", la.life_adjusted_time_from_string("04:00:00"));
+}
