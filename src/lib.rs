@@ -39,7 +39,7 @@ pub struct LifeAdjustments {
 ///
 /// ```
 /// let la = runrs::LifeAdjustments::new();
-/// assert_eq!(la.age, 0)
+/// assert_eq!(la.age, 0.0)
 /// ```
 impl LifeAdjustments {
     pub fn new() -> LifeAdjustments {
