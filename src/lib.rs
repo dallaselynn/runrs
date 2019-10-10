@@ -1,7 +1,5 @@
 extern crate rand;
 
-use rand::Rng;
-
 
 /// calculate x percentage of some number
 /// ```
@@ -278,9 +276,6 @@ const STRATEGIES: [&str; 5] = [
     "Your entire self-worth is based on getting a PR...but have fun out there."
 ];
 
-pub fn race_strategy() -> &'static str {
-    let mut rng = rand::thread_rng();
-    let idx = rng.gen_range(0, STRATEGIES.len());
-
-    STRATEGIES[idx]
+pub fn race_strategy(idx: Option<usize>) -> &'static str {
+    STRATEGIES[idx.unwrap()]
 }
